@@ -1,0 +1,123 @@
+/* public/css/admin_dashboard.css */
+
+/* Variables partagées */
+:root {
+    --primary:        #4a90e2;
+    --secondary:      #f5f7fa;
+    --stripe:         #f9f9f9;
+    --text:           #333;
+    --sidebar-width:  200px;
+  }
+  
+  /* Remise à zéro et modèle de boîte */
+  * {
+    box-sizing: border-box;
+    margin:     0;
+    padding:    0;
+  }
+  
+  /* Corps de page et disposition */
+  body {
+    display:     flex;
+    min-height:  100vh;
+    font-family: 'Arial', sans-serif;
+    color:       var(--text);
+  }
+  
+  /* Contenu principal */
+  .main {
+    margin-left:   var(--sidebar-width);
+    flex:          1;
+    padding:       1rem;
+    overflow-x:    auto;
+  }
+  
+  h1 {
+    font-size:     1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h2.section {
+    font-size:     1.25rem;
+    margin:        1.5rem 0 0.5rem;
+  }
+  
+  /* Tables */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  table {
+    width:            100%;
+    border-collapse:  collapse;
+    margin-bottom:    1rem;
+  }
+  
+  thead {
+    background: #fbe17b;
+  }
+  tbody {
+    background: #d4fcd4;
+  }
+  th, td {
+    padding:        0.75rem 1rem;
+    border:         1px solid #ccc;
+    text-align:     center;
+    line-height:    1.6;
+  }
+  
+  tr:nth-child(even) td {
+    background: #e2ffe2;
+  }
+  
+  tr:hover td {
+    background: #e6f2ff;
+  }
+  
+  th.action,
+  td.action {
+    width: 80px;
+  }
+  
+  /* Bouton “Lire plus” */
+  button.toggle-details {
+    font-size:     0.8rem;
+    padding:       4px 8px;
+    background:    var(--primary);
+    color:         #fff;
+    border:        none;
+    border-radius: 4px;
+    cursor:        pointer;
+  }
+  
+  button.toggle-details:hover {
+    background: #3a78c2;
+  }
+  
+  /* Lignes de détails */
+  .details-row {
+    display:    none;
+    background: var(--secondary);
+  }
+  
+  .details-row td {
+    text-align:  center;
+    line-height: 1.6;
+  }
+  
+  /* Zones copiables */
+  .copyable {
+    cursor:             pointer;
+    text-decoration:    underline dotted;
+    position:           relative;
+  }
+  
+  .copied-feedback {
+    color:       green;
+    margin-left: 4px;
+    font-size:   0.9em;
+    position:    absolute;
+    top:         50%;
+    transform:   translateY(-50%);
+  }
+  
